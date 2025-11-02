@@ -1,0 +1,39 @@
+p{
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        body {
+            /* background-color: rgba(166, 166, 166, 0.537); */
+            background: linear-gradient(magenta, cyan);
+            cursor: url(https://ih1.redbubble.net/image.4303884989.2535/st,small,507x507-pad,600x600,f8f8f8.jpg), auto;
+        }
+        h1, h2, h3, h4, h6 {
+            text-align: center;
+            color: blue
+        }
+        .tulis1 {
+            color: rgb(132, 11, 116);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+        }
+        #tulis2 {
+            color: rgb(11, 11, 132);
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        a { text-decoration: none; }
+        a:link { color: blue; } 
+        a:visited { color: purple; } 
+        a:hover { color: red; } 
+        a:active { color: green; }
+
+        p::first-line { 
+        font-weight: bold; 
+        color: orange; 
+        } 
+        p::first-letter { 
+        font-size: 2em; 
+        } 
