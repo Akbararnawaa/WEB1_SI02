@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biodata Dinamis</title>
+</head>
+<body>
+    <div id="biodata">
+        <img id="foto" src="https://i.pinimg.com/736x/dc/96/44/dc96447942868c0a3dc365ce773c2b6b.jpg" alt="Foto Profil" width="150">
+        <p id="nama">Nama: akbar arnawa adinata</p>
+        <p id="nim">NIM: 0110125032</p>
+        <p id="prodi">Program Studi: Sistem Informasi</p>
+    </div>
+    <button onclick="ubahNama()">Ubah Nama</button>
+    <button onclick="ubahProdi()">Ubah Program Studi</button>
+    <button onclick="gantiFoto()">Ganti Foto</button>
+    <button onclick="sembunyikan()">Sembunyikan Biodata</button>
+    <button onclick="tampilkan()">Tampilkan Biodata</button>
+    <script>
+        function ubahNama() {
+            var namaBaru = prompt("Masukkan nama baru:");
+            if (namaBaru) document.getElementById("nama").innerHTML = "Nama: " + namaBaru;
+        }
+        function ubahProdi() {
+            var prodiBaru = prompt("Masukkan program studi baru:");
+            if (prodiBaru) document.getElementById("prodi").innerHTML = "Program Studi: " + prodiBaru;
+        }
+        function gantiFoto() {
+            var fotoBaru = prompt("Masukkan URL foto baru:");
+            if (fotoBaru) document.getElementById("foto").setAttribute("src", fotoBaru);
+        }
+        function sembunyikan() {
+            document.getElementById("biodata").style.display = "none";
+        }
+        function tampilkan() {
+            document.getElementById("biodata").style.display = "block";
+        }
+    </script>
+</body>
+</html>

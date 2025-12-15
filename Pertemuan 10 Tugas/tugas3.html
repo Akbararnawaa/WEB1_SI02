@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Interaktif</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .answer { display: none; }
+    </style>
+</head>
+<body>
+    <h1>FAQ</h1>
+    <div class="faq">
+        <h3 class="question">Apa itu JavaScript?</h3>
+        <p class="answer">JavaScript adalah bahasa pemrograman untuk web.</p>
+    </div>
+    <div class="faq">
+        <h3 class="question">Bagaimana cara belajar HTML?</h3>
+        <p class="answer">Pelajari tag-tag dasar dan praktikkan.</p>
+    </div>
+    <div class="faq">
+        <h3 class="question">Apa fungsi CSS?</h3>
+        <p class="answer">CSS digunakan untuk styling halaman web.</p>
+    </div>
+    <div class="faq">
+        <h3 class="question">Mengapa menggunakan jQuery?</h3>
+        <p class="answer">jQuery memudahkan manipulasi DOM.</p>
+    </div>
+    <div class="faq">
+        <h3 class="question">Apa itu DOM?</h3>
+        <p class="answer">DOM adalah Document Object Model.</p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.question').click(function() {
+                $(this).next('.answer').toggle();
+            });
+            $('.question').hover(
+                function() {
+                    $(this).css('color', 'blue');
+                },
+                function() {
+                    $(this).css('color', '');
+                }
+            );
+        });
+    </script>
+</body>
+</html>

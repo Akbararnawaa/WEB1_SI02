@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow Gambar</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #slideshow img { display: none; width: 300px; height: 200px; }
+        #slideshow img:first-child { display: block; }
+    </style>
+</head>
+<body>
+    <div id="slideshow">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.BpJbzv7bhouC6pwvjQiNTQHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gambar 1">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.Jo_GOTjA6JnfS6X-Z5AHBgHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gambar 2">
+        <img src="https://i.pinimg.com/originals/25/9f/c7/259fc7d15174b1f52784455bdc95dd11.jpg" alt="Gambar 3">
+    </div>
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+    <script>
+        $(document).ready(function() {
+            var images = $('#slideshow img');
+            var current = 0;
+            $('#next').click(function() {
+                images.eq(current).fadeOut();
+                current = (current + 1) % images.length;
+                images.eq(current).fadeIn();
+            });
+            $('#prev').click(function() {
+                images.eq(current).fadeOut();
+                current = (current - 1 + images.length) % images.length;
+                images.eq(current).fadeIn();
+            });
+        });
+    </script>
+</body>
+</html>
